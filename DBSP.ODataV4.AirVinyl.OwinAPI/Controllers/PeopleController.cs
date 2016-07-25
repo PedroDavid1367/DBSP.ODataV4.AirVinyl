@@ -1,6 +1,6 @@
-﻿using DBSP.ODataV4.AirVinyl.API.Helpers;
-using DBSP.ODataV4.AirVinyl.DataAccessLayer;
+﻿using DBSP.ODataV4.AirVinyl.DataAccessLayer;
 using DBSP.ODataV4.AirVinyl.Model;
+using DBSP.ODataV4.AirVinyl.OwinAPI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Web.Http;
 using System.Web.OData;
 using System.Web.OData.Routing;
 
-namespace DBSP.ODataV4.AirVinyl.API.Controllers
+namespace DBSP.ODataV4.AirVinyl.OwinAPI.Controllers
 {
   public class PeopleController : ODataController
   {

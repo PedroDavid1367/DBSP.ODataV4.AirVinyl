@@ -10,7 +10,7 @@ using System.Web.OData;
 using System.Web.OData.Extensions;
 using System.Web.OData.Routing;
 
-namespace DBSP.ODataV4.AirVinyl.API.Helpers
+namespace DBSP.ODataV4.AirVinyl.OwinAPI.Helpers
 {
     /// <summary>
     /// OData Helper methods - slightly adjusted from OData helpers provided by Microsoft

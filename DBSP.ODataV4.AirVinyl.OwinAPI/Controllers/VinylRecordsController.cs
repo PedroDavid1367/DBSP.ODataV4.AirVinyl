@@ -7,7 +7,7 @@ using System.Web.Http;
 using System.Web.OData;
 using System.Web.OData.Routing;
 
-namespace DBSP.ODataV4.AirVinyl.API.Controllers
+namespace DBSP.ODataV4.AirVinyl.OwinAPI.Controllers
 {
   public class VinylRecordsController : ODataController
   {
