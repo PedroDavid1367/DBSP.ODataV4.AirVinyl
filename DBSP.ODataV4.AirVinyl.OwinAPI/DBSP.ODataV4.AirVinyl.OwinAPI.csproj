@@ -133,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\PeopleController.cs" />
+    <Compile Include="Controllers\RecordStoresController.cs" />
     <Compile Include="Controllers\VinylRecordsController.cs" />
     <Compile Include="Helpers\ODataHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

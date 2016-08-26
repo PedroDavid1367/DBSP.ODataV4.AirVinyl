@@ -10,6 +10,8 @@ namespace DBSP.ODataV4.AirVinyl.Model
 {
   public class RecordStore
   {
+    private ICollection<string> _tags;
+
     [Key]
     public int RecordStoreId { get; set; }
 
@@ -19,7 +21,7 @@ namespace DBSP.ODataV4.AirVinyl.Model
 
     public Address StoreAddress { get; set; }
 
-    public ICollection<string> Tags { get; set; }
+    public ICollection<string> Tags { get { return _tags; } set { _tags = value; } }
 
     public ICollection<Rating> Ratings { get; set; }
 
@@ -28,6 +30,22 @@ namespace DBSP.ODataV4.AirVinyl.Model
       StoreAddress = new Address();
       Ratings = new List<Rating>();
       Tags = new List<string>();
+    }
+
+    public string TagsAsString
+    {
+      get
+      {
+        if (_tags == null || !_tags.Any())
+        {
+          return "";
+        }
+        return _tags.Aggregate((a, b) => a + "," + b);
+      }
+      set
+      {
+        _tags = value.Split(',').ToList();
+      }
     }
   }
 }

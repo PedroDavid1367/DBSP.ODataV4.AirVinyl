@@ -52,6 +52,11 @@
   <ItemGroup>
     <Compile Include="AirVinylDbContext.cs" />
     <Compile Include="AirVinylDBInitializer.cs" />
+    <Compile Include="Migrations\201608261619265_InitialSetUp.cs" />
+    <Compile Include="Migrations\201608261619265_InitialSetUp.Designer.cs">
+      <DependentUpon>201608261619265_InitialSetUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +68,14 @@
       <Project>{6240810b-fbb6-48c6-984e-a2d5ab1fe967}</Project>
       <Name>DBSP.ODataV4.AirVinyl.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201608261619265_InitialSetUp.resx">
+      <DependentUpon>201608261619265_InitialSetUp.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
