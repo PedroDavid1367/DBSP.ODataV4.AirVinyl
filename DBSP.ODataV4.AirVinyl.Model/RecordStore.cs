@@ -23,15 +23,6 @@ namespace DBSP.ODataV4.AirVinyl.Model
 
     public ICollection<string> Tags { get { return _tags; } set { _tags = value; } }
 
-    public ICollection<Rating> Ratings { get; set; }
-
-    public RecordStore()
-    {
-      StoreAddress = new Address();
-      Ratings = new List<Rating>();
-      Tags = new List<string>();
-    }
-
     public string TagsAsString
     {
       get
@@ -46,6 +37,14 @@ namespace DBSP.ODataV4.AirVinyl.Model
       {
         _tags = value.Split(',').ToList();
       }
+    }
+    public ICollection<Rating> Ratings { get; set; }
+
+    public RecordStore()
+    {
+      StoreAddress = new Address();
+      Ratings = new List<Rating>();
+      Tags = new List<string>();
     }
   }
 }

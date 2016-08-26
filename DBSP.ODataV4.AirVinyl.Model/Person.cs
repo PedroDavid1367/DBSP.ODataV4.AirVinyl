@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.OData.Builder;
 
 namespace DBSP.ODataV4.AirVinyl.Model
 {
@@ -33,6 +34,7 @@ namespace DBSP.ODataV4.AirVinyl.Model
 
     public ICollection<Person> Friends { get; set; }
 
+    [Contained]
     public ICollection<VinylRecord> VinylRecords { get; set; }
   }
 }
