@@ -69,9 +69,7 @@
       <Name>DBSP.ODataV4.AirVinyl.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201608261619265_InitialSetUp.resx">
       <DependentUpon>201608261619265_InitialSetUp.cs</DependentUpon>

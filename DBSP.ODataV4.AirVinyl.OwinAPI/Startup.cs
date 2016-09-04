@@ -30,6 +30,8 @@ namespace DBSP.ODataV4.AirVinyl.OwinAPI
 
       config.MapODataServiceRoute("ODataRoute", "odata", GetEdmModel());
 
+      config.EnsureInitialized();
+
       return config;
     }
 
@@ -86,6 +88,13 @@ namespace DBSP.ODataV4.AirVinyl.OwinAPI
       removeRatingsAction.Returns<bool>();
       removeRatingsAction.Parameter<int>("personId");
       removeRatingsAction.Namespace = "AirVinyl.Actions";
+
+      // upgrade a RecordStore to an SpecializedRecordStore
+      // action bound to RecordStore collection
+      var toSpecializedAction = builder.EntityType<RecordStore>().Action("ToSpecialized");
+      toSpecializedAction.Returns<bool>();
+      toSpecializedAction.Parameter<int>("recordStoreId");
+      toSpecializedAction.Namespace = "AirVinyl.Actions";
 
       // unbound action
       var removeRecordStoreRatingsAction = builder.Action("RemoveRecordStoreRatings");

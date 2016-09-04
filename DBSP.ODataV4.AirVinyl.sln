@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBSP.ODataV4.AirVinyl.OwinAPI", "DBSP.ODataV4.AirVinyl.OwinAPI\DBSP.ODataV4.AirVinyl.OwinAPI.csproj", "{87CDEBCF-B622-41E0-8F8E-2ACCBE84C960}"
 EndProject
 Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
